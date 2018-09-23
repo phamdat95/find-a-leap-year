@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>nam_nhuan</title>
+</head>
+<body>
+<script>
+    var year = parseInt(prompt("Enter a year"));
+    var isLeapyear = false;
+    var isdivisibleby4 = year%4 == 0;
+    if (isdivisibleby4){
+        var isdivisibleby100 = year%100 == 0;
+        if (isdivisibleby100){
+            var isdivisibleby400 = year%400 == 0;
+            if (isdivisibleby400){
+                isLeapyear = true;
+            }
+        } else {isLeapyear= true;}
+    }
+    if (isLeapyear){
+        alert(year + "is a leap year");
+    } else {alert(year + "is not a leap year");}
+</script>
+</body>
+</html>
